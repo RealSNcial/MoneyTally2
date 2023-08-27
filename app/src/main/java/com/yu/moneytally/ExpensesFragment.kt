@@ -35,6 +35,7 @@ class ExpensesFragment() : Fragment() {
 
     private fun sampleExpensesList(): MutableList<Expense>{
         return mutableListOf(
+            Expense("Amount", "Date", "Remarks"),
             Expense("1000", "26/08/2023", "sample1"),
             Expense("4000", "26/08/2023", "sample2"),
             Expense("2000", "26/08/2023", "sample3")
@@ -48,6 +49,10 @@ class ExpensesFragment() : Fragment() {
         // Inflate the layout for this fragment
         expensesBinding = FragmentExpensesBinding.inflate(inflater, container, false)
         return expensesBinding!!.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         setupRecyclerView()
     }
 
@@ -71,6 +76,8 @@ class ExpensesFragment() : Fragment() {
                 expensesAdapter.expensesList.add(Expense(expensesAmount, dateRecorded, remarks ))
                 expensesAdapter.notifyItemInserted(expensesAdapter.expensesList.size - 1)
                 binding.expensesAmountText.text?.clear()
+                binding.expensesDateText.text?.clear()
+                binding.expensesRemarksText.text?.clear()
             }
         }
     }

@@ -51,14 +51,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="-5dp"
-                    android:labelFor="@id/alarmsAmountNumber"
+                    android:labelFor="@id/alarmAmount"
                     android:text=" Amount:"
                     android:textColor="#000000"
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/alarmsAmountNumber"
+                    android:id="@+id/alarmAmount"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
@@ -66,8 +66,10 @@
                     android:backgroundTint="#BFE6A3"
                     android:ems="10"
                     android:inputType="number"
+                    android:paddingBottom="20dp"
+                    android:textAlignment="center"
                     android:textColor="#000000"
-                    android:textSize="34sp" />
+                    android:textSize="20sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -82,7 +84,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="-5dp"
-                    android:labelFor="@id/expensesDateText2"
+                    android:labelFor="@id/alarmsDateWhenToPay"
                     android:text="Date when to Pay:"
                     android:textAllCaps="false"
                     android:textColor="#000000"
@@ -90,7 +92,7 @@
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/expensesDateText2"
+                    android:id="@+id/alarmsDateWhenToPay"
                     android:layout_width="140dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
@@ -98,7 +100,9 @@
                     android:backgroundTint="#BFE6A3"
                     android:ems="10"
                     android:inputType="date"
-                    android:textSize="34sp" />
+                    android:paddingBottom="20dp"
+                    android:textAlignment="center"
+                    android:textSize="20sp" />
             </LinearLayout>
 
             <TextView
@@ -114,7 +118,7 @@
 
             <EditText
                 android:id="@+id/alarmRemarksText"
-                android:layout_width="wrap_content"
+                android:layout_width="276dp"
                 android:layout_height="50dp"
                 android:layout_marginLeft="60dp"
                 android:layout_marginTop="10dp"
@@ -123,8 +127,10 @@
                 android:ems="10"
                 android:gravity="start|top"
                 android:inputType="textMultiLine"
+                android:paddingBottom="20dp"
+                android:textAlignment="center"
                 android:textColor="#000000"
-                android:textSize="24sp" />
+                android:textSize="20sp" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/alarmsSubmitButton"
@@ -139,6 +145,20 @@
                 android:textAllCaps="true"
                 android:textColor="#FFFFFF"
                 android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="20dp"
+                android:orientation="horizontal">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvAlarms"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="20dp" />
+
+            </LinearLayout>
 
         </LinearLayout>
     </ScrollView>
