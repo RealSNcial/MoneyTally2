@@ -44,9 +44,6 @@ class AlarmsFragment() : Fragment() {
     private fun sampleAlarmsList(): MutableList<Alarm>{
         return mutableListOf(
             Alarm("Amount", "Date", "Remarks"),
-            Alarm("1000", "09/02/2023", "sample alarm"),
-            Alarm("4000", "09/02/2023", "sample alarm2"),
-            Alarm("500", "09/02/2023", "sample alarm3")
         )
     }
 

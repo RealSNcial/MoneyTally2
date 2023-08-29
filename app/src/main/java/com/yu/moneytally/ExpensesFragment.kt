@@ -36,9 +36,6 @@ class ExpensesFragment() : Fragment() {
     private fun sampleExpensesList(): MutableList<Expense>{
         return mutableListOf(
             Expense("Amount", "Date", "Remarks"),
-            Expense("1000", "26/08/2023", "sample1"),
-            Expense("4000", "26/08/2023", "sample2"),
-            Expense("2000", "26/08/2023", "sample3")
         )
     }
 

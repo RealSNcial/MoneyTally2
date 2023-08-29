@@ -92,6 +92,7 @@
                     android:background="@android:drawable/editbox_background"
                     android:backgroundTint="#BFE6A3"
                     android:ems="10"
+                    android:hint="DD/MM/YYYY"
                     android:inputType="date"
                     android:paddingBottom="20dp"
                     android:textSize="20sp" />
