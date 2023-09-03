@@ -64,6 +64,7 @@ class SavingsFragment() : Fragment(), OnAddButtonListener {
     override fun onAddAmountWallet(amount: String) {
         if (binding.bankAmountTextBox.text.isNotEmpty() &&
             (binding.bankAmountTextBox.text.toString().toInt() - amount.toInt() > 0)) {
+            binding.balanceWarning.visibility = View.INVISIBLE
             if (binding.walletAmountTextBox.text.isEmpty()) {
                 binding.bankAmountTextBox.text =
                     (binding.bankAmountTextBox.text.toString().toInt() - amount.toInt()).toString()
@@ -76,6 +77,7 @@ class SavingsFragment() : Fragment(), OnAddButtonListener {
             }
         } else {
             savingsWalletDialog?.dismiss()
+            binding.balanceWarning.visibility = View.VISIBLE
         }
     }
 }

@@ -61,13 +61,13 @@
                     android:id="@+id/alarmAmount"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginLeft="24dp"
                     android:background="@android:drawable/editbox_background"
                     android:backgroundTint="#BFE6A3"
                     android:ems="10"
                     android:inputType="number"
                     android:paddingBottom="20dp"
-                    android:textAlignment="center"
+                    android:textAlignment="textStart"
                     android:textColor="#000000"
                     android:textSize="20sp" />
             </LinearLayout>
@@ -77,6 +77,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="60dp"
                 android:layout_marginTop="20dp"
+                android:layout_marginRight="70dp"
                 android:orientation="horizontal">
 
                 <TextView
@@ -85,7 +86,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="-5dp"
                     android:labelFor="@id/alarmsDateWhenToPay"
-                    android:text="Date when to Pay:"
+                    android:text="@string/dateWhenToPay"
                     android:textAllCaps="false"
                     android:textColor="#000000"
                     android:textSize="16sp"
@@ -93,7 +94,7 @@
 
                 <EditText
                     android:id="@+id/alarmsDateWhenToPay"
-                    android:layout_width="140dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:background="@android:drawable/editbox_background"
@@ -102,36 +103,40 @@
                     android:hint="DD/MM/YYYY"
                     android:inputType="date"
                     android:paddingBottom="20dp"
-                    android:textAlignment="center"
+                    android:textAlignment="textStart"
                     android:textSize="20sp" />
             </LinearLayout>
 
-            <TextView
-                android:id="@+id/textView6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_marginLeft="60dp"
                 android:layout_marginTop="30dp"
-                android:labelFor="@id/alarmRemarksText"
-                android:text="Remarks:"
-                android:textSize="16sp"
-                android:textStyle="bold" />
+                android:layout_marginRight="70dp"
+                android:orientation="horizontal">
 
-            <EditText
-                android:id="@+id/alarmRemarksText"
-                android:layout_width="276dp"
-                android:layout_height="50dp"
-                android:layout_marginLeft="60dp"
-                android:layout_marginTop="10dp"
-                android:background="@android:drawable/editbox_background"
-                android:backgroundTint="#BFE6A3"
-                android:ems="10"
-                android:gravity="start|top"
-                android:inputType="textMultiLine"
-                android:paddingBottom="20dp"
-                android:textAlignment="center"
-                android:textColor="#000000"
-                android:textSize="20sp" />
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@id/alarmRemarksText"
+                    android:text="Remarks:"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/alarmRemarksText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="23dp"
+                    android:background="@android:drawable/editbox_background"
+                    android:backgroundTint="#BFE6A3"
+                    android:ems="10"
+                    android:inputType="textMultiLine"
+                    android:paddingBottom="75dp"
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
+            </LinearLayout>
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/alarmsSubmitButton"

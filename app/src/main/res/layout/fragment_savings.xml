@@ -137,6 +137,18 @@
                     android:src="@android:drawable/ic_input_add" />
             </LinearLayout>
 
+            <TextView
+                android:id="@+id/balanceWarning"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="80dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="80dp"
+                android:text="@string/balanceWarning"
+                android:textColor="#FF0000"
+                android:textStyle="bold"
+                android:visibility="invisible" />
+
         </LinearLayout>
     </ScrollView>
 
